@@ -34,9 +34,7 @@ describe("test rest api",()=> {
      * This block validate product through product id
      */
     it("validate product through product id and validate only one product of specific id should be displayed ",()=> {
-        
-            const productId =  4643
-
+        const productId =  4643
         cy.trigger_api_request("GET",`/products/${productId}` ).then((response)=> {
             const responseStatus = response.status
             const responseFirstProductId = response.body.id
